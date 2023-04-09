@@ -5,6 +5,7 @@ import cors from "cors"
 import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import news from "./routers/news.js"
+import riot_forge from "./routers/riot_forge.js"
 
 const app = express()
 const PORT = process.env.PORT
@@ -17,6 +18,7 @@ app.use(cors())
 
 
 app.use("/news", news)
+app.use("/riot-forge", riot_forge)
 
 
 mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true})
