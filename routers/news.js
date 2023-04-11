@@ -5,4 +5,5 @@ const router = express.Router()
 
 router.get("/", getNews)
 
+
 export default router
