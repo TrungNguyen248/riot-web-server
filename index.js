@@ -6,6 +6,7 @@ import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import news from "./routers/news.js"
 import riot_forge from "./routers/riot_forge.js"
+import auth from "./routers/auth.js"
 
 const app = express()
 const PORT = process.env.PORT
@@ -19,6 +20,7 @@ app.use(cors())
 
 app.use("/news", news)
 app.use("/riot-forge", riot_forge)
+app.use("/auth", auth)
 
 
 
